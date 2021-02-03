@@ -1,0 +1,19 @@
+// Grid component
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1rem;
+
+    &__cell {
+       @for $i from 1 through 6 {
+           &--h#{$i} {
+               grid-row: auto / span #{$i};
+           }
+
+           &--w#{$i} {
+               grid-column: auto / span #{$i};
+           }
+       } 
+    }
+}

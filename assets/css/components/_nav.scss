@@ -9,15 +9,16 @@
     }
 
     &__home {
-        font-size: $font-size-home;
-        color: $orange;
         align-self: center;
         margin-right: 0.25em;
+        font-size: $font-size-home;
+        text-decoration: none;
     }
 
     &__item {
         font-style: italic;
         margin-right: 0.25em;
+        text-decoration: none;
 
         &:hover {
             color: $color-bg;
@@ -37,6 +38,10 @@
 
             &.color-blue {
                 background-color: $blue;
+            }
+
+            &.color-white {
+                background-color: $white;
             }
         }
     }

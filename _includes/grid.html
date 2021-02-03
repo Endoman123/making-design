@@ -1,0 +1,9 @@
+{% comment %}
+Layout wrapper for a grid
+Grids are set up with a 10rem-cell grid
+Params:
+    - content: Grid content (use a capture block for this)
+{% endcomment %}
+<div class="grid">
+    {{ include.content | markdownify }}
+</div>

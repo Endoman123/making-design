@@ -1,0 +1,12 @@
+{% comment %}
+Layout wrapper for a grid cell
+Params:
+    - content: Cell content (use a capture block for this)
+    - width: Cell width in cell count, default 1
+    - height: Cell height in cell count, default 1
+{% endcomment %}
+<div class="grid__cell 
+            grid__cell--w{{ include.width | at_least: 1 | at_most: 6 | default 1}} 
+            grid__cell--h{{ include.height | at_least: 1 | at_most: 6 | default 1}}">
+    {{ include.content | markdownify }}
+</div>
