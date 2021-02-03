@@ -19,14 +19,7 @@
     }
 
     &__cell {
-        // Yes, this is a hack
-        // No, I don't care right now.
-        &--image {                
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
+        // Formatting classes
         @for $i from 1 through 6 {
             &--h#{$i} {
                 grid-row: auto / span #{$i};
@@ -36,5 +29,9 @@
                 grid-column: auto / span #{$i};
             }
         } 
+
+        &--center {
+            margin: auto;
+        }
     }
 }

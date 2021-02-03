@@ -35,7 +35,7 @@ Focus on your construction techniques involved in the making process. Focus on y
 focus on how you solve the new challenge you've given yourself.
 {% endcapture %}
 {% capture grid %}
-    {% include gridcell.html content=cell1 width=2 height=2 %}
+    {% include gridcell.html content=cell1 width=2 height=2 center=true %}
     {% include gridcell.html content=cell2 width=2 height=2 %}
     {% include gridcell.html type="image" content="https://m.media-amazon.com/images/I/716z67aFfTL._AC_UL1500_.jpg" width=2 height=2 %}
 {% endcapture %}
