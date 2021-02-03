@@ -1,0 +1,15 @@
+{% comment %}
+Image Template
+Params:
+    - src: image source
+    - caption: figure caption text
+    - mods: modifiers
+    - width: image width
+    - height: image height
+{% endcomment %}
+<figure class="figure{% for mod in include.mods %}{{ mod | prepend: " figure--" }}{% endfor %}">
+    <img src="{{ include.src }}" {% if include.width %}width="{{ include.width }}" {% endif %}{% if include.height %}height="{{ include.height }}" {% endif %}class="figure__image"/>
+    {% if include.caption %}
+        <figcaption class="figure__caption">{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>
