@@ -1,0 +1,43 @@
+// Nav component
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &--vertical {
+        flex-direction: column;
+    }
+
+    &__home {
+        font-size: $font-size-home;
+        color: $orange;
+        align-self: center;
+        margin-right: 0.25em;
+    }
+
+    &__item {
+        font-style: italic;
+        margin-right: 0.25em;
+
+        &:hover {
+            color: $color-bg;
+            background-color: $color-text;
+
+            &.color-pink {
+                background-color: $pink;
+            }
+            
+            &.color-orange {
+                background-color: $orange;
+            }
+
+            &.color-green {
+                background-color: $green;
+            }
+
+            &.color-blue {
+                background-color: $blue;
+            }
+        }
+    }
+}

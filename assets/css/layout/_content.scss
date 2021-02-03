@@ -1,0 +1,13 @@
+// Content layout
+.content {
+    margin-top: 10em;
+
+    // Content formatting for text
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1em;
+    }
+
+    p, span, a, li {
+        margin-bottom: 1em;
+    }
+}

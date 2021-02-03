@@ -4,11 +4,19 @@
 ---
 
 // 1 - Abstracts (i.e.: utils)
+@import "abstracts/variables";
 
-// 2 - Base
+// 2 - Vendor/Vendor Extensions
+
+// 3 - Base
 @import "base/reset";
+@import "base/typography";
+@import "base/colors";
 
-// 7 - Vendor
+// 4 - Components
+@import "components/nav";
 
-// 8 - Vendor Extensions
-@import "vendor-extensions/bulma-override";
+// 5 - Layout
+@import "layout/body";
+@import "layout/header";
+@import "layout/content";

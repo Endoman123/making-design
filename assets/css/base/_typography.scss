@@ -1,0 +1,45 @@
+// Typography stylings
+// NOTE: We also use class definitions to allow for styling of text
+//       without the use of the DOM objects
+
+// Default font
+p, span, a, h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-default;
+}
+
+// Paragraph class
+.p, p {
+    font-size: $font-size-default;
+}
+
+// Headers
+h1, h3, h5, .h1, .h3, .h5 {
+    font-size: $font-size-header;
+    font-style: italic;
+    font-weight: bold;
+}
+
+// Sub-headers
+h2, h4, h6, .h2, .h4, .h6 {
+    font-size: $font-size-subheader;
+    font-style: italic;
+    font-weight: bold;
+}
+
+// Anchor resets
+a {
+    text-decoration: inherit;
+}
+
+// Resets I might need
+.fs-normal {
+    font-style: normal;
+}
+
+.fw-normal {
+    font-weight: normal;
+}
+
+.fsize-normal {
+    font-style: $font-size-default;
+}

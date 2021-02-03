@@ -1,0 +1,27 @@
+// Default color styles
+html {
+    background-color: $color-bg;
+}
+
+p, span, a, h1, h2, h3, h4, h5, h6 {
+    color: $color-text;
+} 
+
+// Color class to change colors on-the-fly
+.color {
+    &-pink {
+        color: $pink;
+    }
+    
+    &-orange {
+        color: $orange;
+    }
+
+    &-green {
+        color: $green;
+    }
+
+    &-blue {
+        color: $blue;
+    }
+}

@@ -1,0 +1,19 @@
+<!--Basic header defaults-->
+
+<!--Needed meta information-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!--Style imports-->
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+<script src="https://kit.fontawesome.com/bd41fba6db.js" crossorigin="anonymous"></script>
+
+<!--Site Title-->
+<title>
+{% case page.layout | downcase %}
+    {% when "home" %}
+        {{ site.title }}
+    {% else %}
+        {{ page.title }} :: {{ site.title }}
+{% endcase %}
+</title>
