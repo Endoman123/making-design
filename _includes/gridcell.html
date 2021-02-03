@@ -1,12 +1,17 @@
 {% comment %}
 Layout wrapper for a grid cell
 Params:
-    - content: Cell content (use a capture block for this)
+    - content: Cell content (use a capture block for this) or image url
+    - type: Cell type, for now can only be "image" or null
     - width: Cell width in cell count, default 1
     - height: Cell height in cell count, default 1
 {% endcomment %}
 <div class="grid__cell 
             grid__cell--w{{ include.width | at_least: 1 | at_most: 6 | default 1}} 
             grid__cell--h{{ include.height | at_least: 1 | at_most: 6 | default 1}}">
-    {{ include.content | markdownify }}
+    {% if include.type == "image" %}
+        <img src="{{ include.content }}" style="width: 100%; height: 100%; object-fit: cover" />
+    {% else %}
+        {{ include.content | markdownify }}
+    {% endif %}
 </div>
