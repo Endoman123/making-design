@@ -1,0 +1,86 @@
+---
+permalink: /create/generator.html
+layout: default
+title: idea generator
+description: Generator for ideas.
+---
+<p id="material">Click "Generate" to generate a material,</p>
+<p id="tool">a tool,</p>
+<p id="idea">and an idea to put it all together.</p>
+<button id="generate">Generate</button>
+<script>
+    var materials = [
+    	"paper",
+    	"clay",
+    	"paint",
+    	"yarn",
+    	"string",
+    	"wire",
+    	"clay",
+    	"dirt or sand",
+    	"food",
+    	"recycled material",
+    	"items found in your junk drawer",
+    ];
+
+    var tools = [
+    	"hands",
+    	"garden shears",
+    	"sticks",
+    	"crochet hooks",
+    	"needles",
+    	"toothpicks",
+    	"scissors",
+    	"rolling pin",
+    	"paintbrush",
+    	"utensils"
+    
+    ];
+
+    var ideas_dirA = [
+    	"watch a video",
+    	"listen to an album",
+    	"set a timer for 5 minutes",
+    	"call your friend",
+    	"think of 3 adjectives",
+    	"imagine your favorite place",
+    	"think about a goal for your day"
+    ];
+
+    var ideas_dirB = [
+    	"make something",
+    	"sketch it"
+    ];
+
+    var ideas_adj = [
+    	"smooth",
+    	"silly",
+    	"colorful",
+    	"that you enjoy",
+    	"quick",
+    	"messy",
+    	"that you can hang up",
+    	"that relates to a school project",
+    	"that explores construction",
+    	"that makes you think"
+    ];
+
+    document.getElementById("generate").onclick = function() {
+    	var material = getRandom(materials);
+    	var tool = getRandom(tools);
+        var idea = getRandom(ideas_dirA) + " and " + 
+    		       getRandom(ideas_dirB) + " " +
+    		       getRandom(ideas_adj);
+    
+    	document.getElementById('material').innerHTML = "With some " + material + ", ";
+    	document.getElementById('tool').innerHTML = "using some " + tool + ", ";
+    	document.getElementById('idea').innerHTML = idea + "!";
+    };
+
+    function getRandom(arr) {
+    	if (Array.isArray(arr))
+    		return arr[Math.floor(Math.random() * arr.length)];
+    	else
+    		return null;
+    };
+</script>

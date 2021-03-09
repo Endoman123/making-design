@@ -1,0 +1,62 @@
+.brain {
+  margin: -10rem 10rem 0 10rem;
+  .a {
+    fill: $color-text;
+    font-family: "AcuminPro-Regular";
+    font-size: 33px;
+  }
+  .b {
+    fill: $color-text;
+    font-family: "AcuminPro-Regular";
+    font-size: 24px;
+  }
+  .st0 {
+    fill: none;
+    stroke: $pink;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+  .st1 {
+    fill: none;
+  }
+  .st2 {
+    fill: none;
+    stroke: $green;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+  .st3 {
+    fill: none;
+    stroke: $blue;
+    stroke-width: 5;
+    stroke-miterlimit: 10;
+  }
+  .st4 {
+    fill: $orange;
+  }
+  a:hover {
+    .st0 {
+      fill: $pink;
+    }
+    .st2 {
+      fill: $green;
+    }
+    .st3 {
+      fill: $blue;
+    }
+    .a,
+    .b {
+      fill: $color-bg;
+    }
+  }
+
+  // TODO: BEM
+  &__pink {
+  }
+
+  &__blue {
+  }
+
+  &__orange {
+  }
+}

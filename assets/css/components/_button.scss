@@ -1,0 +1,14 @@
+.button, button {
+    font-family: $font-family-default;
+    padding: 0.5rem 1rem;
+    border: $orange 5px solid;
+    border-radius: 10px;
+    background: none;
+    color: $orange;
+    cursor: pointer;
+
+    &:hover {
+        background: $orange;
+        color: $color-bg;
+    }
+}
